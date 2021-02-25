@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>850</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>80</y>
+      <width>1071</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Balance Sheet</string>
+     </attribute>
+     <widget class="QTableWidget" name="tableWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>70</y>
+        <width>281</width>
+        <height>181</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>40</y>
+        <width>121</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Current Assets</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tableWidget_5">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>320</y>
+        <width>281</width>
+        <height>181</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>290</y>
+        <width>121</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Fixed Assets</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tableWidget_6">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>70</y>
+        <width>281</width>
+        <height>181</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>40</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Short Term Liabilities</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>310</y>
+        <width>161</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Long Term Liabilities</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tableWidget_7">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>330</y>
+        <width>281</width>
+        <height>181</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>150</y>
+        <width>91</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Total Assets</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>190</y>
+        <width>111</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Total Liabilities</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>240</y>
+        <width>91</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Net worth</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>150</y>
+        <width>91</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>$0.00</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>240</y>
+        <width>91</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>$0.00</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>190</y>
+        <width>91</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>$0.00</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>40</y>
+        <width>91</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>$0.00</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>290</y>
+        <width>91</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>$0.00</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>810</x>
+        <y>40</y>
+        <width>91</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>$0.00</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>810</x>
+        <y>310</y>
+        <width>91</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>$0.00</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Income Statement</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>Employees</string>
+     </attribute>
+     <widget class="QTableView" name="tableView">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>50</y>
+        <width>861</width>
+        <height>451</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>530</y>
+        <width>121</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Add Employee</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox">
+      <property name="geometry">
+       <rect>
+        <x>850</x>
+        <y>20</y>
+        <width>71</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Active</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_4">
+     <attribute name="title">
+      <string>Vendors</string>
+     </attribute>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>830</x>
+        <y>530</y>
+        <width>101</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Add Vendor</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_2">
+      <property name="geometry">
+       <rect>
+        <x>840</x>
+        <y>20</y>
+        <width>92</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Active</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>50</y>
+        <width>961</width>
+        <height>471</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_5">
+     <attribute name="title">
+      <string>Customers</string>
+     </attribute>
+     <widget class="QTableWidget" name="tableWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>40</y>
+        <width>971</width>
+        <height>481</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>830</x>
+        <y>530</y>
+        <width>131</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Add Customer</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_3">
+      <property name="geometry">
+       <rect>
+        <x>840</x>
+        <y>10</y>
+        <width>92</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Active</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_6">
+     <attribute name="title">
+      <string>Inventory</string>
+     </attribute>
+     <widget class="QTableWidget" name="tableWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>40</y>
+        <width>931</width>
+        <height>481</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_4">
+      <property name="geometry">
+       <rect>
+        <x>850</x>
+        <y>10</y>
+        <width>92</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Active</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>540</y>
+        <width>89</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Add Part</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>540</y>
+        <width>101</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Add Vendor</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="geometry">
+       <rect>
+        <x>840</x>
+        <y>540</y>
+        <width>151</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Purchase Inventory</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_7">
+     <attribute name="title">
+      <string>Invoice</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_8">
+     <attribute name="title">
+      <string>Purchase Order</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_9">
+     <attribute name="title">
+      <string>Payroll</string>
+     </attribute>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFinTracker">
+    <property name="title">
+     <string>File</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+   </widget>
+   <addaction name="menuFinTracker"/>
+   <addaction name="menuEdit"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

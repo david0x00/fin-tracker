@@ -1,3 +1,8 @@
+from PyQt5.QtWidgets import QMainWindow, QFileDialog, QInputDialog, QLineEdit, QMessageBox, QWidget, QTableWidgetItem, QComboBox
+from PyQt5.QtCore import QThread, QObject, Qt, pyqtSignal, pyqtSlot
+from PyQt5.QtGui import QImage, QPixmap, QIcon
+from PyQt5 import uic
+
 class HomeWindow(QMainWindow):
     def __init__(self):
         super(HomeWindow, self).__init__()
@@ -11,3 +16,4 @@ class HomeWindow(QMainWindow):
     def closingTasks(self):
         print("Closing...")
         #self.saveSettings()
+        

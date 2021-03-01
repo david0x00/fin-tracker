@@ -262,17 +262,7 @@
      <attribute name="title">
       <string>Employees</string>
      </attribute>
-     <widget class="QTableView" name="tableView">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>50</y>
-        <width>861</width>
-        <height>451</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="add_employee_btn">
       <property name="geometry">
        <rect>
         <x>820</x>
@@ -296,6 +286,16 @@
       </property>
       <property name="text">
        <string>Active</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="employee_table">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>50</y>
+        <width>951</width>
+        <height>461</height>
+       </rect>
       </property>
      </widget>
     </widget>

@@ -2,11 +2,12 @@ class VendorList:
     def __init__(self):
 
 class Vendor:
-    def init(self, company_name="", part_dict={}, address="", city="", zipcode="", active=True):
+    def init(self, company_name="", part_dict={}, address="", city="", state="", zipcode="", active=True):
         self.company_name = company_name
         self.part_dict = part_dict
         self.address = address
         self.city = city
+        self.state = state
         self.zipcode = zipcode
         self.active = active
     
@@ -18,5 +19,5 @@ class Vendor:
     
     def createCSVString(self):
         csv_string =   self.company_name + "," + self.address + "," \
-                     + self.city + "," + self.zipcode + "," + self.active + "\n"
+                     + self.city + "," + self.state + "," + self.zipcode + "," + self.active + "\n"
         return csv_string

@@ -275,19 +275,6 @@
        <string>Add Employee</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="checkBox">
-      <property name="geometry">
-       <rect>
-        <x>850</x>
-        <y>20</y>
-        <width>71</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Active</string>
-      </property>
-     </widget>
      <widget class="QTableWidget" name="employee_table">
       <property name="geometry">
        <rect>
@@ -314,19 +301,6 @@
       </property>
       <property name="text">
        <string>Add Vendor</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_2">
-      <property name="geometry">
-       <rect>
-        <x>840</x>
-        <y>20</y>
-        <width>92</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Active</string>
       </property>
      </widget>
      <widget class="QTableWidget" name="tableWidget">
@@ -367,19 +341,6 @@
        <string>Add Customer</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="checkBox_3">
-      <property name="geometry">
-       <rect>
-        <x>840</x>
-        <y>10</y>
-        <width>92</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Active</string>
-      </property>
-     </widget>
     </widget>
     <widget class="QWidget" name="tab_6">
      <attribute name="title">
@@ -393,19 +354,6 @@
         <width>931</width>
         <height>481</height>
        </rect>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_4">
-      <property name="geometry">
-       <rect>
-        <x>850</x>
-        <y>10</y>
-        <width>92</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Active</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_4">

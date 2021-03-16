@@ -1,3 +1,4 @@
+from PyQt5.QtCore import pyqtSignal, pyqtSlot
 import fileFunctions
 import tableFunctions
 import forms
@@ -9,51 +10,47 @@ class EmployeeList:
         self.add_employee_btn = add_employee_btn
         self.add_employee_btn.clicked.connect(self.launchAddEmployeeForm)
         self.readInEmployees()
-        self.setupTable()
         self.updateTable()
 
     def readInEmployees(self):
         self.employee_df = fileFunctions.readCSV(self.employee_list_file)
+        print(self.employee_df)
         self.headers = list(self.employee_df.columns)
     
     def launchAddEmployeeForm(self):
-        self.add_form = forms.AddEmployee()
+        #self.add_employee_btn.setEnabled(False)
+        self.add_form = forms.AddEmployee(self)
+        self.add_form.submit_signal.connect(self.updateTable)
         self.add_form.show()
     
     def addEmployee(self, last_name="", first_name="", address="", city="", state="", zipcode="", ssn="", withholdings=0, salary=0):
+        new_employee_dict = \
+            {
+                "last_name" : last_name,
+                "first_name" : first_name,
+                "address" : address,
+                "city" : city,
+                "state" : state,
+                "zipcode" : zipcode,
+                "ssn" : ssn,
+                "salary" : salary,
+                "withholdings" : withholdings
+            }
+        self.employee_df = self.employee_df.append(new_employee_dict, ignore_index=True)
+        print(self.employee_df)
+        return True
     
-    def setupTable(self):
+    def updateTable(self):
         tableFunctions.setRowCount(self.employee_table, self.employee_df.shape[0])
         tableFunctions.setColumnCount(self.employee_table, self.employee_df.shape[1])
         tableFunctions.setHeaders(self.employee_table, self.headers)
-    
-    def updateTable(self):
         for r, row in self.employee_df.iterrows():
             for c, item in enumerate(row):
                 tableFunctions.setItem(self.employee_table, r, c, item)
-
-class Employee:
-    def init(self, last_name="", first_name="", address="", city="", state="", zipcode="", ssn="", withholdings=0, salary=0, active=True):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.address = address
-        self.city = city
-        self.state = state
-        self.zipcode = zipcode
-        self.ssn = ssn
-        self.withholdings = withholdings
-        self.salary = salary
-        self.date_added = date_added
-        self.active = active
+        fileFunctions.writeCSV(self.employee_df, self.employee_list_file)
     
-    def activate(self):
-        self.active = True
-    
-    def deactivate(self):
-        self.active = False
-    
-    def createCSVString(self):
+    def createCSVString(self, row):
         csv_string =   self.last_name + "," + self.first_name + "," + self.address + "," \
                      + self.city + "," + self.state + "," + self.zipcode + "," + self.ssn + "," \
-                     + self.withholdings + "," + self.salary + "," + self.date_added + "," + self.active + "\n"
+                     + self.salary + "," + self.withholdings + "\n"
         return csv_string

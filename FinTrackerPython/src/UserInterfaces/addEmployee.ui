@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="first_name_le">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -45,7 +45,7 @@
     <string>Add Employee</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="last_name_le">
    <property name="geometry">
     <rect>
      <x>200</x>
@@ -64,7 +64,7 @@
     <string>Last Name</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_3">
+  <widget class="QLineEdit" name="address_le">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -83,7 +83,7 @@
     <string>Address</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_4">
+  <widget class="QLineEdit" name="city_le">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -102,7 +102,7 @@
     <string>City</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_5">
+  <widget class="QLineEdit" name="state_le">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -121,7 +121,7 @@
     <string>State</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_6">
+  <widget class="QLineEdit" name="zipcode_le">
    <property name="geometry">
     <rect>
      <x>270</x>
@@ -140,7 +140,7 @@
     <string>Zip</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_7">
+  <widget class="QLineEdit" name="salary_le">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -159,7 +159,7 @@
     <string>Salary</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_8">
+  <widget class="QLineEdit" name="withholdings_le">
    <property name="geometry">
     <rect>
      <x>190</x>
@@ -178,7 +178,7 @@
     <string>Withholdings</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_9">
+  <widget class="QLineEdit" name="ssn_le">
    <property name="geometry">
     <rect>
      <x>30</x>

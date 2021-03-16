@@ -14,7 +14,6 @@ class EmployeeList:
 
     def readInEmployees(self):
         self.employee_df = fileFunctions.readCSV(self.employee_list_file)
-        print(self.employee_df)
         self.headers = list(self.employee_df.columns)
     
     def launchAddEmployeeForm(self):
@@ -37,7 +36,6 @@ class EmployeeList:
                 "withholdings" : withholdings
             }
         self.employee_df = self.employee_df.append(new_employee_dict, ignore_index=True)
-        print(self.employee_df)
         return True
     
     def updateTable(self):
@@ -48,9 +46,3 @@ class EmployeeList:
             for c, item in enumerate(row):
                 tableFunctions.setItem(self.employee_table, r, c, item)
         fileFunctions.writeCSV(self.employee_df, self.employee_list_file)
-    
-    def createCSVString(self, row):
-        csv_string =   self.last_name + "," + self.first_name + "," + self.address + "," \
-                     + self.city + "," + self.state + "," + self.zipcode + "," + self.ssn + "," \
-                     + self.salary + "," + self.withholdings + "\n"
-        return csv_string

@@ -7,18 +7,18 @@
     <x>0</x>
     <y>0</y>
     <width>387</width>
-    <height>350</height>
+    <height>246</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLineEdit" name="first_name_le">
+  <widget class="QLineEdit" name="company_name_le">
    <property name="geometry">
     <rect>
      <x>30</x>
      <y>60</y>
-     <width>151</width>
+     <width>321</width>
      <height>25</height>
     </rect>
    </property>
@@ -29,39 +29,20 @@
     <number>32768</number>
    </property>
    <property name="placeholderText">
-    <string>First Name</string>
+    <string>CompanyName</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>160</x>
      <y>20</y>
-     <width>91</width>
+     <width>81</width>
      <height>17</height>
     </rect>
    </property>
    <property name="text">
-    <string>Add Employee</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="last_name_le">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>60</y>
-     <width>151</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="maxLength">
-    <number>32768</number>
-   </property>
-   <property name="placeholderText">
-    <string>Last Name</string>
+    <string>Add Vendor</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="address_le">
@@ -140,68 +121,11 @@
     <string>Zip</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="salary_le">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>260</y>
-     <width>141</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="maxLength">
-    <number>32768</number>
-   </property>
-   <property name="placeholderText">
-    <string>Salary</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="withholdings_le">
-   <property name="geometry">
-    <rect>
-     <x>190</x>
-     <y>260</y>
-     <width>161</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="maxLength">
-    <number>32768</number>
-   </property>
-   <property name="placeholderText">
-    <string>Withholdings</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="ssn_le">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>210</y>
-     <width>161</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="maxLength">
-    <number>32768</number>
-   </property>
-   <property name="placeholderText">
-    <string>SSN</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="submit_btn">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>310</y>
+     <x>150</x>
+     <y>200</y>
      <width>89</width>
      <height>25</height>
     </rect>

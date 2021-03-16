@@ -6,3 +6,6 @@ def readCSV(file):
 
 def writeCSV(df, filename):
     df.to_csv(filename, index=False)
+
+def getColumnList(df, index_name):
+    return df[index_name].tolist()

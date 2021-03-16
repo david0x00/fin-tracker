@@ -1,23 +1,47 @@
-class VendorList:
-    def __init__(self):
+from PyQt5.QtCore import pyqtSignal, pyqtSlot
+import fileFunctions
+import tableFunctions
+import forms
 
-class Vendor:
-    def init(self, company_name="", part_dict={}, address="", city="", state="", zipcode="", active=True):
-        self.company_name = company_name
-        self.part_dict = part_dict
-        self.address = address
-        self.city = city
-        self.state = state
-        self.zipcode = zipcode
-        self.active = active
+class VendorList:
+    def __init__(self, vendor_table, add_vendor_btn):
+        self.vendor_list_file = "../Vendors/vendor_list.csv"
+        self.vendor_table = vendor_table
+        self.add_vendor_btn = add_vendor_btn
+        self.add_vendor_btn.clicked.connect(self.launchAddVendorForm)
+        self.readInVendors()
+        self.updateTable()
+
+    def readInVendors(self):
+        self.vendor_df = fileFunctions.readCSV(self.vendor_list_file)
+        self.headers = list(self.vendor_df.columns)
     
-    def activate(self):
-        self.active = True
+    def launchAddVendorForm(self):
+        #self.add_vendor_btn.setEnabled(False)
+        self.add_form = forms.AddVendor(self)
+        self.add_form.submit_signal.connect(self.updateTable)
+        self.add_form.show()
     
-    def deactivate(self):
-        self.active = False
+    def addVendor(self, company_name="", address="", city="", state="", zipcode=""):
+        new_vendor_dict = \
+            {
+                "company_name" : company_name,
+                "address" : address,
+                "city" : city,
+                "state" : state,
+                "zipcode" : zipcode
+            }
+        self.vendor_df = self.vendor_df.append(new_vendor_dict, ignore_index=True)
+        return True
     
-    def createCSVString(self):
-        csv_string =   self.company_name + "," + self.address + "," \
-                     + self.city + "," + self.state + "," + self.zipcode + "," + self.active + "\n"
-        return csv_string
+    def updateTable(self):
+        tableFunctions.setRowCount(self.vendor_table, self.vendor_df.shape[0])
+        tableFunctions.setColumnCount(self.vendor_table, self.vendor_df.shape[1])
+        tableFunctions.setHeaders(self.vendor_table, self.headers)
+        for r, row in self.vendor_df.iterrows():
+            for c, item in enumerate(row):
+                tableFunctions.setItem(self.vendor_table, r, c, item)
+        fileFunctions.writeCSV(self.vendor_df, self.vendor_list_file)
+
+    def getListOfNames(self):
+        return fileFunctions.getColumnList(self.vendor_df, "company_name")

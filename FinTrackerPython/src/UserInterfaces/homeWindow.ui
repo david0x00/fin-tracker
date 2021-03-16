@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
-    <height>850</height>
+    <width>1149</width>
+    <height>752</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -290,7 +290,7 @@
      <attribute name="title">
       <string>Vendors</string>
      </attribute>
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="add_vendor_btn">
       <property name="geometry">
        <rect>
         <x>830</x>
@@ -303,7 +303,7 @@
        <string>Add Vendor</string>
       </property>
      </widget>
-     <widget class="QTableWidget" name="tableWidget">
+     <widget class="QTableWidget" name="vendor_table">
       <property name="geometry">
        <rect>
         <x>60</x>
@@ -318,7 +318,7 @@
      <attribute name="title">
       <string>Customers</string>
      </attribute>
-     <widget class="QTableWidget" name="tableWidget_2">
+     <widget class="QTableWidget" name="customer_table">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -328,7 +328,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_3">
+     <widget class="QPushButton" name="add_customer_btn">
       <property name="geometry">
        <rect>
         <x>830</x>
@@ -346,7 +346,7 @@
      <attribute name="title">
       <string>Inventory</string>
      </attribute>
-     <widget class="QTableWidget" name="tableWidget_3">
+     <widget class="QTableWidget" name="inventory_table">
       <property name="geometry">
        <rect>
         <x>70</x>
@@ -356,10 +356,10 @@
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_4">
+     <widget class="QPushButton" name="add_part_btn">
       <property name="geometry">
        <rect>
-        <x>630</x>
+        <x>740</x>
         <y>540</y>
         <width>89</width>
         <height>25</height>
@@ -367,19 +367,6 @@
       </property>
       <property name="text">
        <string>Add Part</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_5">
-      <property name="geometry">
-       <rect>
-        <x>730</x>
-        <y>540</y>
-        <width>101</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add Vendor</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_6">
@@ -418,7 +405,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1200</width>
+     <width>1149</width>
      <height>22</height>
     </rect>
    </property>

@@ -1,15 +1,15 @@
 part_name,count,part_number,unit_price,vendor
-Motor,240,747583,7.4,Amazon
-Robot Chassis,235,20534MH,31.99,Amazon
+Motor,232,747583,7.4,Amazon
+Robot Chassis,233,20534MH,31.99,Amazon
 Plastic Wheel,240,384W,2.5,Amazon
-Raspberry Pi Computer,225,rpi4,39.99,Amazon
-OLED Display,225,0947,6.99,Amazon
-Jumper Wires,225,4567GHS,5.99,Amazon
-Temperature Sensor,225,3456df,5.32,Digikey
-Web Cam,225,logi234,69.99,Amazon
-ADC 4 input,225,ads1115,4.99,Digikey
-Motor Shield,225,3456geek,34.69,Amazon
-Servo Motor,250,HS311,12.99,Digikey
-Li Ion battery,250,18650,4.5,Amazon
-Battery Holder,235,BH345,3.49,Amazon
-USB-C Cable,235,45UI,3.89,Amazon
+Raspberry Pi Computer,223,rpi4,39.99,Amazon
+OLED Display,223,0947,6.99,Amazon
+Jumper Wires,223,4567GHS,5.99,Amazon
+Temperature Sensor,223,3456df,5.32,Digikey
+Web Cam,223,logi234,69.99,Amazon
+ADC 4 input,223,ads1115,4.99,Digikey
+Motor Shield,223,3456geek,34.69,Amazon
+Servo Motor,246,HS311,12.99,Digikey
+Li Ion battery,246,18650,4.5,Amazon
+Battery Holder,233,BH345,3.49,Amazon
+USB-C Cable,233,45UI,3.89,Amazon

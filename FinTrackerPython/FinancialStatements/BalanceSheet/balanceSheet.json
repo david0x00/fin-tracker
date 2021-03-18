@@ -1,16 +1,16 @@
 {
     "current assets": {
-        "cash": 50000,
-        "inventory parts": 2014.38,
-        "inventory products": 0.0,
-        "receivables": 999.99
+        "cash": 91666.66666666667,
+        "inventory parts": 53791.450000000004,
+        "inventory products": 4999.95,
+        "receivables": 49999.5
     },
     "fixed assets": {
         "real estate": 0,
         "machines": 0
     },
     "short term liabilities": {
-        "payables": 231.0,
+        "payables": 69296.49999999999,
         "credit balance": 0
     },
     "long term liabilities": {

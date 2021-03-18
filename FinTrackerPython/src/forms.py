@@ -182,22 +182,71 @@ class PurchaseParts(QWidget):
 class Payroll(QWidget):
     submit_signal = pyqtSignal()
     
-    def __init__(self, inventory, product_list):
+    def __init__(self, employee_list):
         super().__init__()
-        uic.loadUi('./UserInterfaces/sellRobots.ui', self)
-        self.inventory = inventory
-        self.product_list = product_list
-        self.product_cb.addItems(self.product_list)
-        self.submit_btn.clicked.connect(self.sellRobots)
-    
-    def sellRobots(self):
-        product = self.product_cb.currentText()
-        try:
-            quantity = int(self.quantity_le.text())
-        except ValueError:
-            quantity = 0
+        uic.loadUi('./UserInterfaces/payroll.ui', self)
+        self.employee_list = employee_list
+        self.names_list = []
+        for idx, employee in self.employee_list.employee_df.iterrows():
+            name = employee.last_name + ", " + employee.first_name
+            self.names_list.append(name)
+        self.employee_cb.addItems(self.names_list)
+        self.employee_cb.activated.connect(self.calculateSalary)
+        self.submit_btn.clicked.connect(self.runPayroll)
+        self.calculateSalary()
 
-        success = self.inventory.sellRobots(product=product, quantity=quantity)
+    def calculateSalary(self):
+        idx = self.employee_cb.currentIndex()
+        salary = self.employee_list.employee_df.salary[idx] / 12.0
+        self.monthly_salary_label.setText(fileFunctions.formatCurrency(salary))
+    
+    def runPayroll(self):
+        employee_id = self.employee_cb.currentIndex()
+        salary = self.employee_list.employee_df.salary[employee_id] / 12.0
+
+        success = self.employee_list.runPayroll(employee_id, salary)
+
+        if success == True:
+            self.submit_signal.emit()
+            self.close()
+
+class TransferPayables(QWidget):
+    submit_signal = pyqtSignal()
+    
+    def __init__(self, balance_sheet):
+        super().__init__()
+        uic.loadUi('./UserInterfaces/transferPayables.ui', self)
+        self.balance_sheet = balance_sheet
+        self.submit_btn.clicked.connect(self.transferPayables)
+    
+    def transferPayables(self):
+        try:
+            amount = int(self.amount_le.text())
+        except ValueError:
+            amount = 0
+
+        success = self.balance_sheet.transferPayables(amount)
+
+        if success == True:
+            self.submit_signal.emit()
+            self.close()
+
+class TransferReceivables(QWidget):
+    submit_signal = pyqtSignal()
+    
+    def __init__(self, balance_sheet):
+        super().__init__()
+        uic.loadUi('./UserInterfaces/transferReceivables.ui', self)
+        self.balance_sheet = balance_sheet
+        self.submit_btn.clicked.connect(self.transferReceivables)
+    
+    def transferReceivables(self):
+        try:
+            amount = int(self.amount_le.text())
+        except ValueError:
+            amount = 0
+
+        success = self.balance_sheet.transferReceivables(amount)
 
         if success == True:
             self.submit_signal.emit()

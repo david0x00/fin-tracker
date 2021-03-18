@@ -283,6 +283,32 @@
        <number>6</number>
       </property>
      </widget>
+     <widget class="QPushButton" name="transfer_payables_btn">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>100</y>
+        <width>141</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Transfer Payables</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="transfer_receivables_btn">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>140</y>
+        <width>161</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Transfer Receivables</string>
+      </property>
+     </widget>
      <zorder>frame</zorder>
      <zorder>current_assets_table</zorder>
      <zorder>label</zorder>
@@ -302,6 +328,8 @@
      <zorder>fixed_assets_label</zorder>
      <zorder>st_liabilities_label</zorder>
      <zorder>lt_liabilities_label</zorder>
+     <zorder>transfer_payables_btn</zorder>
+     <zorder>transfer_receivables_btn</zorder>
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">

@@ -32,9 +32,46 @@ class BalanceSheet:
 
         self.updateTables()
         self.updateTotalLabels()
+        
+        self.transfer_payables_btn = self.home_window.transfer_payables_btn
+        self.transfer_receivables_btn = self.home_window.transfer_receivables_btn
+        self.transfer_payables_btn.clicked.connect(self.launchTransferPayablesForm)
+        self.transfer_receivables_btn.clicked.connect(self.launchTransferReceivablesForm)
     
     def __getitem__(self, key):
         return self.balance_sheet[key]
+    
+    def launchTransferPayablesForm(self):
+        self.payables_form = forms.TransferPayables(self)
+        self.payables_form.submit_signal.connect(self.updateTables)
+        self.payables_form.show()
+
+    def launchTransferReceivablesForm(self):
+        self.receivables_form = forms.TransferReceivables(self)
+        self.receivables_form.submit_signal.connect(self.updateTables)
+        self.receivables_form.show()
+    
+    def transferPayables(self, amount):
+        if amount > self.balance_sheet["current assets"]["cash"]:
+            return False
+        balance = self.balance_sheet["short term liabilities"]["payables"]
+        if amount > balance:
+            new_amount = balance
+        else:
+            new_amount = amount
+        self.balance_sheet["short term liabilities"]["payables"] -= new_amount
+        self.balance_sheet["current assets"]["cash"] -= new_amount
+        return True
+
+    def transferReceivables(self, amount):
+        balance = self.balance_sheet["current assets"]["receivables"]
+        if amount > balance:
+            new_amount = balance
+        else:
+            new_amount = amount
+        self.balance_sheet["current assets"]["receivables"] -= new_amount
+        self.balance_sheet["current assets"]["cash"] += new_amount
+        return True
     
     def updateTotals(self):
         for category in self.balance_sheet.keys():

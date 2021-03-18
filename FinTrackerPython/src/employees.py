@@ -31,8 +31,8 @@ class EmployeeList:
         self.payroll_form.show()
 
     def updateAllTables(self):
-        self.balance_sheet.updateAllInformation()
-        self.income_statement.updateAllInformation()
+        self.home_window.balance_sheet.updateAllInformation()
+        self.home_window.income_statement.updateAllInformation()
     
     def addEmployee(self, last_name="", first_name="", address="", city="", state="", zipcode="", ssn="", withholdings=0, salary=0):
         new_employee_dict = \
@@ -48,6 +48,15 @@ class EmployeeList:
                 "withholdings" : withholdings
             }
         self.employee_df = self.employee_df.append(new_employee_dict, ignore_index=True)
+        return True
+    
+    def runPayroll(self, employee_id, payment):
+        balance = self.home_window.balance_sheet["current assets"]["cash"]
+        if payment > balance:
+            return False
+        
+        self.home_window.balance_sheet["current assets"]["cash"] -= payment
+        self.home_window.income_statement["expenses"]["salaries"] += payment
         return True
     
     def updateTable(self):

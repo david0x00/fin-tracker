@@ -41,7 +41,7 @@ class VendorList:
         tableFunctions.setHeaders(self.vendor_table, self.headers)
         for r, row in self.vendor_df.iterrows():
             for c, item in enumerate(row):
-                tableFunctions.setItem(self.vendor_table, r, c, item)
+                tableFunctions.setItem(self.vendor_table, r, c, str(item))
         fileFunctions.writeCSV(self.vendor_df, self.vendor_list_file)
 
     def getListOfNames(self):

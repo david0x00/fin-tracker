@@ -10,6 +10,8 @@ class EmployeeList:
         self.employee_table = self.home_window.employee_table
         self.add_employee_btn = self.home_window.add_employee_btn
         self.add_employee_btn.clicked.connect(self.launchAddEmployeeForm)
+        self.payroll_btn = self.home_window.payroll_btn
+        self.payroll_btn.clicked.connect(self.launchPayrollForm)
         self.readInEmployees()
         self.updateTable()
 
@@ -22,6 +24,15 @@ class EmployeeList:
         self.add_form = forms.AddEmployee(self)
         self.add_form.submit_signal.connect(self.updateTable)
         self.add_form.show()
+
+    def launchPayrollForm(self):
+        self.payroll_form = forms.Payroll(self)
+        self.payroll_form.submit_signal.connect(self.updateAllTables)
+        self.payroll_form.show()
+
+    def updateAllTables(self):
+        self.balance_sheet.updateAllInformation()
+        self.income_statement.updateAllInformation()
     
     def addEmployee(self, last_name="", first_name="", address="", city="", state="", zipcode="", ssn="", withholdings=0, salary=0):
         new_employee_dict = \
@@ -45,5 +56,5 @@ class EmployeeList:
         tableFunctions.setHeaders(self.employee_table, self.headers)
         for r, row in self.employee_df.iterrows():
             for c, item in enumerate(row):
-                tableFunctions.setItem(self.employee_table, r, c, item)
+                tableFunctions.setItem(self.employee_table, r, c, str(item))
         fileFunctions.writeCSV(self.employee_df, self.employee_list_file)

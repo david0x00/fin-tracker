@@ -1,13 +1,13 @@
 {
     "revenue": {
-        "basic robot kit": 25000
+        "basic robot kit": 1999.98
     },
     "cogs": {
-        "basic robot kit": 10000
+        "basic robot kit": 563.82
     },
     "expenses": {
-        "salaries": 5000,
-        "rent": 3000,
+        "salaries": 0,
+        "rent": 0,
         "depreciation": 0
     },
     "taxes": {

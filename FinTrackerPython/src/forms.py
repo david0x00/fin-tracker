@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import QWidget
 from PyQt5.QtCore import pyqtSignal, pyqtSlot
 from PyQt5 import uic
+import fileFunctions
 
 class AddEmployee(QWidget):
     submit_signal = pyqtSignal()
@@ -91,5 +92,113 @@ class AddPart(QWidget):
         new_add = self.part_list.addPart(part_name=part_name, part_number=part_number, unit_price=unit_price,
                                          vendor=vendor)
         if new_add == True:
+            self.submit_signal.emit()
+            self.close()
+
+class BuildRobots(QWidget):
+    submit_signal = pyqtSignal()
+    
+    def __init__(self, inventory, product_list):
+        super().__init__()
+        uic.loadUi('./UserInterfaces/buildRobots.ui', self)
+        self.inventory = inventory
+        self.product_list = product_list
+        self.product_cb.addItems(self.product_list)
+        self.submit_btn.clicked.connect(self.buildRobots)
+    
+    def buildRobots(self):
+        product = self.product_cb.currentText()
+        try:
+            quantity = int(self.quantity_le.text())
+        except ValueError:
+            quantity = 0
+
+        success = self.inventory.buildRobots(product=product, quantity=quantity)
+
+        if success == True:
+            self.submit_signal.emit()
+            self.close()
+
+class SellRobots(QWidget):
+    submit_signal = pyqtSignal()
+    
+    def __init__(self, inventory, product_list):
+        super().__init__()
+        uic.loadUi('./UserInterfaces/sellRobots.ui', self)
+        self.inventory = inventory
+        self.product_list = product_list
+        self.product_cb.addItems(self.product_list)
+        self.submit_btn.clicked.connect(self.sellRobots)
+    
+    def sellRobots(self):
+        product = self.product_cb.currentText()
+        try:
+            quantity = int(self.quantity_le.text())
+        except ValueError:
+            quantity = 0
+
+        success = self.inventory.sellRobots(product=product, quantity=quantity)
+
+        if success == True:
+            self.submit_signal.emit()
+            self.close()
+
+class PurchaseParts(QWidget):
+    submit_signal = pyqtSignal()
+    
+    def __init__(self, inventory, parts_list):
+        super().__init__()
+        uic.loadUi('./UserInterfaces/purchaseParts.ui', self)
+        self.inventory = inventory
+        self.parts_list = parts_list
+        self.parts_cb.addItems(self.parts_list)
+        self.quantity_le.textChanged.connect(self.calculateCost)
+        self.parts_cb.activated.connect(self.calculateCost)
+        self.submit_btn.clicked.connect(self.purchaseParts)
+    
+    def calculateCost(self):
+        try:
+            quantity = int(self.quantity_le.text())
+            idx = self.parts_cb.currentIndex()
+            unit_price = self.inventory.inventory_df.unit_price[idx]
+            total_cost = unit_price * quantity
+            self.total_cost_label.setText(fileFunctions.formatCurrency(total_cost))
+        except ValueError:
+            self.total_cost_label.setText(fileFunctions.formatCurrency(0))
+    
+    def purchaseParts(self):
+        part_num = self.parts_cb.currentIndex()
+
+        try:
+            quantity = int(self.quantity_le.text())
+        except ValueError:
+            quantity = 0
+
+        success = self.inventory.purchaseParts(part_num=part_num, quantity=quantity)
+
+        if success == True:
+            self.submit_signal.emit()
+
+class Payroll(QWidget):
+    submit_signal = pyqtSignal()
+    
+    def __init__(self, inventory, product_list):
+        super().__init__()
+        uic.loadUi('./UserInterfaces/sellRobots.ui', self)
+        self.inventory = inventory
+        self.product_list = product_list
+        self.product_cb.addItems(self.product_list)
+        self.submit_btn.clicked.connect(self.sellRobots)
+    
+    def sellRobots(self):
+        product = self.product_cb.currentText()
+        try:
+            quantity = int(self.quantity_le.text())
+        except ValueError:
+            quantity = 0
+
+        success = self.inventory.sellRobots(product=product, quantity=quantity)
+
+        if success == True:
             self.submit_signal.emit()
             self.close()

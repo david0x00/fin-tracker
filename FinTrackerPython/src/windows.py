@@ -12,12 +12,12 @@ class HomeWindow(QMainWindow):
     def __init__(self):
         super(HomeWindow, self).__init__()
         uic.loadUi('./UserInterfaces/homeWindow.ui', self)
-        self.employee_list = employees.EmployeeList(self)
         self.vendor_list = vendors.VendorList(self)
         self.customer_list = customers.CustomerList(self)
-        self.inventory = inventory.Inventory(self)
         self.balance_sheet = financialStatements.BalanceSheet(self)
         self.income_statement = financialStatements.IncomeStatement(self)
+        self.employee_list = employees.EmployeeList(self)
+        self.inventory = inventory.Inventory(self)
         self.initializeScreens()
         self.show()
 

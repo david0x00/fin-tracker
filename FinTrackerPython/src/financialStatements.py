@@ -33,6 +33,9 @@ class BalanceSheet:
         self.updateTables()
         self.updateTotalLabels()
     
+    def __getitem__(self, key):
+        return self.balance_sheet[key]
+    
     def updateTotals(self):
         for category in self.balance_sheet.keys():
             self.totals[category] = 0 
@@ -62,6 +65,11 @@ class BalanceSheet:
 
     def netWorth(self):
         return self.totalAssets() - self.totalLiabilities()
+    
+    def updateAllInformation(self):
+        self.updateTables()
+        self.updateTotals()
+        self.updateTotalLabels()
 
     def updateCategoryTable(self, category):
         table = self.tables[category]
@@ -78,6 +86,7 @@ class BalanceSheet:
     def updateTables(self):
         for category in self.tables.keys():
             self.updateCategoryTable(category)
+        fileFunctions.writeJSON(self.balance_sheet_file, self.balance_sheet)
     
     def updateTotalLabel(self, category):
         label = self.total_labels[category]
@@ -118,6 +127,9 @@ class IncomeStatement:
         self.updateTotalLabels()
         self.home_window.tax_rate_label.setText("Total Taxes (" + str(self.taxRate()*100) + "%):")
     
+    def __getitem__(self, key):
+        return self.income_statement[key]
+
     def updateTotals(self):
         for category in self.income_statement.keys():
             if category != "taxes":
@@ -153,6 +165,11 @@ class IncomeStatement:
     def postTaxIncome(self):
         return self.preTaxIncome() - self.taxes()
 
+    def updateAllInformation(self):
+        self.updateTables()
+        self.updateTotals()
+        self.updateTotalLabels()
+
     def updateCategoryTable(self, category):
         table = self.tables[category]
         headers = ["item", "total"]
@@ -168,6 +185,7 @@ class IncomeStatement:
     def updateTables(self):
         for category in self.tables.keys():
             self.updateCategoryTable(category)
+        fileFunctions.writeJSON(self.income_statement_file, self.income_statement)
 
     def updateTotalLabel(self, category):
         label = self.total_labels[category]

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1149</width>
-    <height>752</height>
+    <width>1128</width>
+    <height>765</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,58 +18,14 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>50</y>
+      <y>100</y>
       <width>1071</width>
       <height>611</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
-    <widget class="QWidget" name="tab_10">
-     <attribute name="title">
-      <string>Home</string>
-     </attribute>
-     <widget class="QPushButton" name="sale_home_btn">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>90</y>
-        <width>121</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Enter Sale</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="purchase_inv_home_btn">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>180</y>
-        <width>161</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Purchase Inventory</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="payroll_home_btn">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>280</y>
-        <width>161</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Payroll</string>
-      </property>
-     </widget>
-    </widget>
     <widget class="QWidget" name="tab">
      <attribute name="title">
       <string>Balance Sheet</string>
@@ -77,18 +33,21 @@
      <widget class="QTableWidget" name="current_assets_table">
       <property name="geometry">
        <rect>
-        <x>70</x>
+        <x>60</x>
         <y>70</y>
-        <width>281</width>
+        <width>350</width>
         <height>181</height>
        </rect>
       </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>175</number>
+      </attribute>
      </widget>
      <widget class="QLabel" name="label">
       <property name="geometry">
        <rect>
-        <x>80</x>
-        <y>40</y>
+        <x>60</x>
+        <y>50</y>
         <width>121</width>
         <height>17</height>
        </rect>
@@ -101,17 +60,20 @@
       <property name="geometry">
        <rect>
         <x>60</x>
-        <y>320</y>
-        <width>281</width>
+        <y>330</y>
+        <width>350</width>
         <height>181</height>
        </rect>
       </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>175</number>
+      </attribute>
      </widget>
      <widget class="QLabel" name="label_2">
       <property name="geometry">
        <rect>
-        <x>70</x>
-        <y>290</y>
+        <x>60</x>
+        <y>310</y>
         <width>121</width>
         <height>17</height>
        </rect>
@@ -123,18 +85,21 @@
      <widget class="QTableWidget" name="st_liabilities_table">
       <property name="geometry">
        <rect>
-        <x>640</x>
+        <x>660</x>
         <y>80</y>
-        <width>281</width>
+        <width>350</width>
         <height>181</height>
        </rect>
       </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>175</number>
+      </attribute>
      </widget>
      <widget class="QLabel" name="label_3">
       <property name="geometry">
        <rect>
-        <x>650</x>
-        <y>40</y>
+        <x>660</x>
+        <y>60</y>
         <width>181</width>
         <height>17</height>
        </rect>
@@ -159,57 +124,60 @@
      <widget class="QTableWidget" name="lt_liabilities_table">
       <property name="geometry">
        <rect>
-        <x>640</x>
+        <x>660</x>
         <y>330</y>
-        <width>281</width>
+        <width>350</width>
         <height>181</height>
        </rect>
       </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>175</number>
+      </attribute>
      </widget>
      <widget class="QLabel" name="label_5">
       <property name="geometry">
        <rect>
-        <x>390</x>
-        <y>150</y>
-        <width>91</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Total Assets</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_6">
-      <property name="geometry">
-       <rect>
-        <x>390</x>
-        <y>190</y>
-        <width>111</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Total Liabilities</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_7">
-      <property name="geometry">
-       <rect>
-        <x>390</x>
+        <x>450</x>
         <y>240</y>
         <width>91</width>
         <height>17</height>
        </rect>
       </property>
       <property name="text">
-       <string>Net worth</string>
+       <string>Total Assets:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>280</y>
+        <width>111</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Total Liabilities:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>330</y>
+        <width>81</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Net Worth:</string>
       </property>
      </widget>
      <widget class="QLabel" name="assets_label">
       <property name="geometry">
        <rect>
-        <x>530</x>
-        <y>150</y>
+        <x>550</x>
+        <y>240</y>
         <width>91</width>
         <height>17</height>
        </rect>
@@ -221,8 +189,8 @@
      <widget class="QLabel" name="net_worth_label">
       <property name="geometry">
        <rect>
-        <x>530</x>
-        <y>240</y>
+        <x>550</x>
+        <y>330</y>
         <width>91</width>
         <height>17</height>
        </rect>
@@ -234,8 +202,8 @@
      <widget class="QLabel" name="liabilities_label">
       <property name="geometry">
        <rect>
-        <x>530</x>
-        <y>190</y>
+        <x>550</x>
+        <y>280</y>
         <width>91</width>
         <height>17</height>
        </rect>
@@ -247,8 +215,8 @@
      <widget class="QLabel" name="current_assets_label">
       <property name="geometry">
        <rect>
-        <x>210</x>
-        <y>40</y>
+        <x>310</x>
+        <y>50</y>
         <width>91</width>
         <height>17</height>
        </rect>
@@ -260,8 +228,8 @@
      <widget class="QLabel" name="fixed_assets_label">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>290</y>
+        <x>310</x>
+        <y>310</y>
         <width>91</width>
         <height>17</height>
        </rect>
@@ -273,8 +241,8 @@
      <widget class="QLabel" name="st_liabilities_label">
       <property name="geometry">
        <rect>
-        <x>810</x>
-        <y>40</y>
+        <x>910</x>
+        <y>60</y>
         <width>91</width>
         <height>17</height>
        </rect>
@@ -286,7 +254,7 @@
      <widget class="QLabel" name="lt_liabilities_label">
       <property name="geometry">
        <rect>
-        <x>810</x>
+        <x>920</x>
         <y>310</y>
         <width>91</width>
         <height>17</height>
@@ -296,6 +264,44 @@
        <string>$0.00</string>
       </property>
      </widget>
+     <widget class="QFrame" name="frame">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>230</y>
+        <width>231</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <property name="lineWidth">
+       <number>6</number>
+      </property>
+     </widget>
+     <zorder>frame</zorder>
+     <zorder>current_assets_table</zorder>
+     <zorder>label</zorder>
+     <zorder>fixed_assets_table</zorder>
+     <zorder>label_2</zorder>
+     <zorder>st_liabilities_table</zorder>
+     <zorder>label_3</zorder>
+     <zorder>label_4</zorder>
+     <zorder>lt_liabilities_table</zorder>
+     <zorder>label_5</zorder>
+     <zorder>label_6</zorder>
+     <zorder>label_7</zorder>
+     <zorder>assets_label</zorder>
+     <zorder>net_worth_label</zorder>
+     <zorder>liabilities_label</zorder>
+     <zorder>current_assets_label</zorder>
+     <zorder>fixed_assets_label</zorder>
+     <zorder>st_liabilities_label</zorder>
+     <zorder>lt_liabilities_label</zorder>
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
@@ -304,37 +310,46 @@
      <widget class="QTableWidget" name="revenue_table">
       <property name="geometry">
        <rect>
-        <x>100</x>
+        <x>90</x>
         <y>50</y>
-        <width>381</width>
+        <width>400</width>
         <height>131</height>
        </rect>
       </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>200</number>
+      </attribute>
      </widget>
      <widget class="QTableWidget" name="cogs_table">
       <property name="geometry">
        <rect>
-        <x>100</x>
+        <x>90</x>
         <y>230</y>
-        <width>381</width>
+        <width>400</width>
         <height>141</height>
        </rect>
       </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>200</number>
+      </attribute>
      </widget>
      <widget class="QTableWidget" name="expenses_table">
       <property name="geometry">
        <rect>
         <x>580</x>
         <y>50</y>
-        <width>381</width>
+        <width>400</width>
         <height>341</height>
        </rect>
       </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>200</number>
+      </attribute>
      </widget>
      <widget class="QLabel" name="label_8">
       <property name="geometry">
        <rect>
-        <x>100</x>
+        <x>90</x>
         <y>30</y>
         <width>67</width>
         <height>17</height>
@@ -347,7 +362,7 @@
      <widget class="QLabel" name="label_9">
       <property name="geometry">
        <rect>
-        <x>100</x>
+        <x>90</x>
         <y>210</y>
         <width>141</width>
         <height>17</height>
@@ -360,7 +375,7 @@
      <widget class="QLabel" name="label_10">
       <property name="geometry">
        <rect>
-        <x>100</x>
+        <x>90</x>
         <y>180</y>
         <width>141</width>
         <height>17</height>
@@ -373,7 +388,7 @@
      <widget class="QLabel" name="label_11">
       <property name="geometry">
        <rect>
-        <x>100</x>
+        <x>90</x>
         <y>370</y>
         <width>141</width>
         <height>17</height>
@@ -386,7 +401,7 @@
      <widget class="QLabel" name="revenue_label">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>350</x>
         <y>180</y>
         <width>141</width>
         <height>17</height>
@@ -399,7 +414,7 @@
      <widget class="QLabel" name="cogs_label">
       <property name="geometry">
        <rect>
-        <x>330</x>
+        <x>350</x>
         <y>370</y>
         <width>141</width>
         <height>17</height>
@@ -426,7 +441,7 @@
       <property name="geometry">
        <rect>
         <x>580</x>
-        <y>400</y>
+        <y>390</y>
         <width>141</width>
         <height>17</height>
        </rect>
@@ -438,8 +453,8 @@
      <widget class="QLabel" name="expenses_label">
       <property name="geometry">
        <rect>
-        <x>820</x>
-        <y>400</y>
+        <x>840</x>
+        <y>390</y>
         <width>141</width>
         <height>17</height>
        </rect>
@@ -451,7 +466,7 @@
      <widget class="QLabel" name="label_17">
       <property name="geometry">
        <rect>
-        <x>350</x>
+        <x>370</x>
         <y>470</y>
         <width>191</width>
         <height>17</height>
@@ -464,7 +479,7 @@
      <widget class="QLabel" name="tax_rate_label">
       <property name="geometry">
        <rect>
-        <x>350</x>
+        <x>370</x>
         <y>490</y>
         <width>191</width>
         <height>17</height>
@@ -477,7 +492,7 @@
      <widget class="QLabel" name="pre_tax_income_label">
       <property name="geometry">
        <rect>
-        <x>550</x>
+        <x>570</x>
         <y>470</y>
         <width>141</width>
         <height>17</height>
@@ -490,7 +505,7 @@
      <widget class="QLabel" name="total_taxes_label">
       <property name="geometry">
        <rect>
-        <x>550</x>
+        <x>570</x>
         <y>490</y>
         <width>141</width>
         <height>17</height>
@@ -503,7 +518,7 @@
      <widget class="QLabel" name="label_18">
       <property name="geometry">
        <rect>
-        <x>350</x>
+        <x>370</x>
         <y>520</y>
         <width>191</width>
         <height>17</height>
@@ -516,7 +531,7 @@
      <widget class="QLabel" name="post_tax_income_label">
       <property name="geometry">
        <rect>
-        <x>550</x>
+        <x>570</x>
         <y>520</y>
         <width>141</width>
         <height>17</height>
@@ -529,7 +544,7 @@
      <widget class="QLabel" name="label_12">
       <property name="geometry">
        <rect>
-        <x>100</x>
+        <x>90</x>
         <y>400</y>
         <width>141</width>
         <height>17</height>
@@ -542,7 +557,7 @@
      <widget class="QLabel" name="gross_profit_label">
       <property name="geometry">
        <rect>
-        <x>330</x>
+        <x>350</x>
         <y>400</y>
         <width>141</width>
         <height>17</height>
@@ -560,7 +575,7 @@
      <widget class="QPushButton" name="add_employee_btn">
       <property name="geometry">
        <rect>
-        <x>820</x>
+        <x>910</x>
         <y>530</y>
         <width>121</width>
         <height>25</height>
@@ -573,11 +588,27 @@
      <widget class="QTableWidget" name="employee_table">
       <property name="geometry">
        <rect>
-        <x>70</x>
-        <y>50</y>
-        <width>951</width>
-        <height>461</height>
+        <x>30</x>
+        <y>30</y>
+        <width>1000</width>
+        <height>491</height>
        </rect>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>112</number>
+      </attribute>
+     </widget>
+     <widget class="QPushButton" name="payroll_btn">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>530</y>
+        <width>121</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Payroll</string>
       </property>
      </widget>
     </widget>
@@ -588,7 +619,7 @@
      <widget class="QPushButton" name="add_vendor_btn">
       <property name="geometry">
        <rect>
-        <x>830</x>
+        <x>930</x>
         <y>530</y>
         <width>101</width>
         <height>25</height>
@@ -601,12 +632,15 @@
      <widget class="QTableWidget" name="vendor_table">
       <property name="geometry">
        <rect>
-        <x>60</x>
-        <y>50</y>
-        <width>961</width>
-        <height>471</height>
+        <x>30</x>
+        <y>30</y>
+        <width>1000</width>
+        <height>491</height>
        </rect>
       </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>200</number>
+      </attribute>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_5">
@@ -616,17 +650,20 @@
      <widget class="QTableWidget" name="customer_table">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>40</y>
-        <width>971</width>
-        <height>481</height>
+        <x>30</x>
+        <y>30</y>
+        <width>1000</width>
+        <height>491</height>
        </rect>
       </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>167</number>
+      </attribute>
      </widget>
      <widget class="QPushButton" name="add_customer_btn">
       <property name="geometry">
        <rect>
-        <x>830</x>
+        <x>900</x>
         <y>530</y>
         <width>131</width>
         <height>25</height>
@@ -644,9 +681,9 @@
      <widget class="QTableWidget" name="inventory_table">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>30</x>
         <y>40</y>
-        <width>371</width>
+        <width>530</width>
         <height>471</height>
        </rect>
       </property>
@@ -654,8 +691,8 @@
      <widget class="QPushButton" name="add_part_btn">
       <property name="geometry">
        <rect>
-        <x>740</x>
-        <y>540</y>
+        <x>30</x>
+        <y>530</y>
         <width>89</width>
         <height>25</height>
        </rect>
@@ -664,11 +701,11 @@
        <string>Add Part</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_6">
+     <widget class="QPushButton" name="purchase_inventory_btn">
       <property name="geometry">
        <rect>
-        <x>840</x>
-        <y>540</y>
+        <x>140</x>
+        <y>530</y>
         <width>151</width>
         <height>25</height>
        </rect>
@@ -677,32 +714,88 @@
        <string>Purchase Inventory</string>
       </property>
      </widget>
-     <widget class="QTableWidget" name="inventory_table_2">
+     <widget class="QTableWidget" name="products_table">
       <property name="geometry">
        <rect>
-        <x>620</x>
+        <x>610</x>
         <y>40</y>
-        <width>371</width>
+        <width>430</width>
         <height>471</height>
        </rect>
       </property>
      </widget>
+     <widget class="QPushButton" name="build_robots_btn">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>530</y>
+        <width>151</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Build Robots</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>151</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Component Inventory</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>20</y>
+        <width>151</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Product Inventory</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="sell_robots_btn">
+      <property name="geometry">
+       <rect>
+        <x>890</x>
+        <y>530</y>
+        <width>151</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sell Robots</string>
+      </property>
+     </widget>
     </widget>
-    <widget class="QWidget" name="tab_7">
-     <attribute name="title">
-      <string>Invoice</string>
-     </attribute>
-    </widget>
-    <widget class="QWidget" name="tab_8">
-     <attribute name="title">
-      <string>Purchase Order</string>
-     </attribute>
-    </widget>
-    <widget class="QWidget" name="tab_9">
-     <attribute name="title">
-      <string>Payroll</string>
-     </attribute>
-    </widget>
+   </widget>
+   <widget class="QLabel" name="label_19">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>10</y>
+      <width>241</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>icons/null_robotics_logo.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -710,7 +803,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1149</width>
+     <width>1128</width>
      <height>22</height>
     </rect>
    </property>

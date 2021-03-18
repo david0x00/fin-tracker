@@ -42,5 +42,5 @@ class CustomerList:
         tableFunctions.setHeaders(self.customer_table, self.headers)
         for r, row in self.customer_df.iterrows():
             for c, item in enumerate(row):
-                tableFunctions.setItem(self.customer_table, r, c, item)
+                tableFunctions.setItem(self.customer_table, r, c, str(item))
         fileFunctions.writeCSV(self.customer_df, self.customer_list_file)

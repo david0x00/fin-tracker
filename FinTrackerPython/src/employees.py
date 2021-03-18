@@ -4,10 +4,11 @@ import tableFunctions
 import forms
 
 class EmployeeList:
-    def __init__(self, employee_table, add_employee_btn):
+    def __init__(self, home_window):
         self.employee_list_file = "../Employees/employee_list.csv"
-        self.employee_table = employee_table
-        self.add_employee_btn = add_employee_btn
+        self.home_window = home_window
+        self.employee_table = self.home_window.employee_table
+        self.add_employee_btn = self.home_window.add_employee_btn
         self.add_employee_btn.clicked.connect(self.launchAddEmployeeForm)
         self.readInEmployees()
         self.updateTable()

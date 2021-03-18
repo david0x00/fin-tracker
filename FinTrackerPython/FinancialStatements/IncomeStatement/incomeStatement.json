@@ -1,0 +1,16 @@
+{
+    "revenue": {
+        "basic robot kit": 25000
+    },
+    "cogs": {
+        "basic robot kit": 10000
+    },
+    "expenses": {
+        "salaries": 5000,
+        "rent": 3000,
+        "depreciation": 0
+    },
+    "taxes": {
+        "rate": 0.25
+    }
+}

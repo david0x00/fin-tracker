@@ -4,10 +4,11 @@ import tableFunctions
 import forms
 
 class CustomerList:
-    def __init__(self, customer_table, add_customer_btn):
+    def __init__(self, home_window):
         self.customer_list_file = "../Customers/customer_list.csv"
-        self.customer_table = customer_table
-        self.add_customer_btn = add_customer_btn
+        self.home_window = home_window
+        self.customer_table = self.home_window.customer_table
+        self.add_customer_btn = self.home_window.add_customer_btn
         self.add_customer_btn.clicked.connect(self.launchAddCustomerForm)
         self.readInCustomers()
         self.updateTable()

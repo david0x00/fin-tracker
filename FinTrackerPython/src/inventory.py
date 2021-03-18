@@ -4,11 +4,12 @@ import tableFunctions
 import forms
 
 class Inventory:
-    def __init__(self, inventory_table, add_part_btn, vendor_list):
+    def __init__(self, home_window):
         self.part_list_file = "../Inventory/part_list.csv"
-        self.inventory_table = inventory_table
-        self.add_part_btn = add_part_btn
-        self.vendor_list = vendor_list
+        self.home_window = home_window
+        self.inventory_table = self.home_window.inventory_table
+        self.add_part_btn = self.home_window.add_part_btn
+        self.vendor_list = self.home_window.vendor_list
         self.add_part_btn.clicked.connect(self.launchAddPartForm)
         self.readInParts()
         self.updateTable()

@@ -6,15 +6,18 @@ import employees
 import vendors
 import customers
 import inventory
+import financialStatements
 
 class HomeWindow(QMainWindow):
     def __init__(self):
         super(HomeWindow, self).__init__()
         uic.loadUi('./UserInterfaces/homeWindow.ui', self)
-        self.employee_list = employees.EmployeeList(self.employee_table, self.add_employee_btn)
-        self.vendor_list = vendors.VendorList(self.vendor_table, self.add_vendor_btn)
-        self.customer_list = customers.CustomerList(self.customer_table, self.add_customer_btn)
-        self.inventory = inventory.Inventory(self.inventory_table, self.add_part_btn, self.vendor_list)
+        self.employee_list = employees.EmployeeList(self)
+        self.vendor_list = vendors.VendorList(self)
+        self.customer_list = customers.CustomerList(self)
+        self.inventory = inventory.Inventory(self)
+        self.balance_sheet = financialStatements.BalanceSheet(self)
+        self.income_statement = financialStatements.IncomeStatement(self)
         self.initializeScreens()
         self.show()
 

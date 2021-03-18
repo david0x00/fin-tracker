@@ -4,10 +4,11 @@ import tableFunctions
 import forms
 
 class VendorList:
-    def __init__(self, vendor_table, add_vendor_btn):
+    def __init__(self, home_window):
         self.vendor_list_file = "../Vendors/vendor_list.csv"
-        self.vendor_table = vendor_table
-        self.add_vendor_btn = add_vendor_btn
+        self.home_window = home_window
+        self.vendor_table = self.home_window.vendor_table
+        self.add_vendor_btn = self.home_window.add_vendor_btn
         self.add_vendor_btn.clicked.connect(self.launchAddVendorForm)
         self.readInVendors()
         self.updateTable()
